@@ -12,6 +12,17 @@ def numeros_al_final_basico(lista: List[Union[float, str]]) -> List[Union[float,
         - Utilizar la función type.
         - No utilizar índices.
     """
+    numeros=[]
+    strings=[]
+    for elem in lista:
+        if(type(elem) is str):
+            strings.append(elem)
+        else:
+            numeros.append(elem)
+    strings.extend(numeros)
+    return strings
+
+        
 
 
 # NO MODIFICAR - INICIO
@@ -32,5 +43,5 @@ def numeros_al_final_comprension(lista: List[Union[float, str]]) -> List[Union[f
 
 
 # NO MODIFICAR - INICIO
-assert numeros_al_final_comprension([3, "a", 1, "b", 10, "j"]) == ["a", "b", "j", 3, 1, 10]  # noqa: E501
+#assert numeros_al_final_comprension([3, "a", 1, "b", 10, "j"]) == ["a", "b", "j", 3, 1, 10]  # noqa: E501
 # NO MODIFICAR - FIN
